@@ -5,6 +5,10 @@ public class TriangleTests {
     [InlineData(10, 1, 1)]
     [InlineData(1, 10, 1)]
     [InlineData(1, 1, 10)]
+    [InlineData(-1, -1, -1)]
+    [InlineData(-1, 1, 1)]
+    [InlineData(-1, 1, 2)]
+    [InlineData(0, 0, 0)]
     public void NotTriangle(double a, double b, double c) {
         Assert.Throws<ArgumentException>(() => Triangle.Triangle.GetTriangleType(a, b, c));
     }

@@ -4,6 +4,15 @@ public static class Triangle {
     // точность
     private const double Precision = 1E-15;
 
+    /// <summary>
+    /// Возвращает вид треугольника
+    /// </summary>
+    /// <returns>
+    /// &gt; 0 - треугольник с тупым углом
+    /// &lt; 0 - треугольник с острыми углами
+    /// == 0 - треугольник прямоугольный
+    /// </returns>
+    /// <exception cref="ArgumentException"></exception>
     public static double GetTriangleType(double a, double b, double c) {
         if (!(a + b > c && a + c > b && b + c > a)) throw new ArgumentException("is not triangle");
 
